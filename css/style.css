@@ -1,0 +1,131 @@
+:root{
+    --black : #000000;
+    --gray: #303030;
+    --white: #ffffff;
+}
+/* utils */
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/* set default font-color as white */
+body{
+    color: var(--white);
+    font-family: inter, san-serif;
+    background-image: url(../assets/mobile/bg-image-daytime.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    padding: 2rem;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    background-color: rgba(0 0 0 / .3);
+    /* padding: 2rem; */
+}
+
+.quote, .author{
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+.time-container{
+    display: flex;
+    flex-direction: column;
+}
+.time-display{
+    display: flex;
+    align-items: baseline;
+}
+.time-display .zone{
+    font-size: .8rem;
+    margin-left: .5rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+}
+.greetings h2{
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.time-display h1{
+    font-size: 7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.location{
+    margin-top: -1rem;
+}
+.location p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.clock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.more-less{
+    color: var(--gray);
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    background-color: var(--white);
+    width: 14ch;
+    padding: 0.5rem;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1rem;
+    padding: 3px 0;
+    margin-top: 3rem;
+}
+.more-less-icon{
+    height: 40px;
+    height: 40px;
+    margin-right: .2rem;
+}
+
+.more-less-icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.details{
+   background-color: #303030;
+   padding: 2rem 0;
+}
+.timezone-days-of-year, .days-of-year, .day-of-week, .week-number{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.timezone-text, .days-of-year-text, .day-of-week-text, .week-number-text{
+    font-size: .8rem;
+    font-weight: 300;
+}
