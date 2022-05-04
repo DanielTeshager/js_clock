@@ -5,7 +5,14 @@
 }
 /* utils */
 .hide{
-    display: none;
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+.down{
+    transform: rotate(180deg);
+    transition: all .5s ease-out;
 }
 .show{
     display: block;
@@ -26,14 +33,16 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .container{
     padding: 2rem;
 }
 main{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    overflow-y: scroll;
     flex-direction: column;
     /* align-items: center; */
     justify-content: space-between;
@@ -64,6 +73,9 @@ main{
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: .2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .time-display h1{
@@ -108,16 +120,16 @@ main{
     height: 40px;
     height: 40px;
     margin-right: .2rem;
-}
 
-.more-less-icon img{
-    width: 100%;
-    height: 100%;
 }
 
 .details{
-   background-color: #303030;
-   padding: 2rem 0;
+    background-color: #959595;
+    padding: 2rem 0;
+    overflow: hidden;
+    transition: all 1s ease-out;
+    position: relative;
+    bottom: -2rem;
 }
 .timezone-days-of-year, .days-of-year, .day-of-week, .week-number{
     display: flex;
