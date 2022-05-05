@@ -13,6 +13,7 @@ const timezone_value = document.querySelector('.timezone-value');
 const days_of_year_value = document.querySelector('.days-of-year-value');
 const days_of_week_value = document.querySelector('.days-of-week-value');
 const week_number_value = document.querySelector('.week-number-value');
+const body = document.querySelector('body');
 //handle refresh quote
 refreh_quote.addEventListener('click', () => {
     fetchQuote();
@@ -58,13 +59,21 @@ more_less_btn.addEventListener('click', function() {
         if (hour >= 0 && hour < 12) {
             greetings_text.innerHTML = 'Good Morning';
             day_night_icon.src = './assets/desktop/icon-sun.svg';
+            body.style.backgroundImage = 'url(./assets/desktop/bg-image-daytime.jpg)';
+            details.classList.remove('night');
+            details.classList.add('day');
         } else if (hour >= 12 && hour < 18) {
             greetings_text.innerHTML = 'Good Afternoon';
             // day_night_icon.src = './assets/desktop/icon-sun.svg';
+            details.classList.add('day');
         } else if (hour >= 18 && hour < 24) {
             greetings_text.innerHTML = 'Good Evening';
             day_night_icon.src = './assets/desktop/icon-moon.svg';
+            body.style.backgroundImage = 'url(./assets/desktop/bg-image-nighttime.jpg)';
+            details.classList.add('night');
+            details.classList.remove('day');
         }
+
     }
 
     // fetch quote of the day
@@ -112,5 +121,6 @@ more_less_btn.addEventListener('click', function() {
         const week_number = Math.floor((day - 1) / 7) + 1;
         //show week number
         week_number_value.innerHTML = week_number;
+
     
     });
