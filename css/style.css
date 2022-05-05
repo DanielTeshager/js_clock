@@ -42,7 +42,7 @@ main{
     width: 100%;
     min-height: 100vh;
     display: flex;
-    overflow-y: scroll;
+    overflow-y:hidden;
     flex-direction: column;
     /* align-items: center; */
     justify-content: space-between;
@@ -141,3 +141,50 @@ main{
     font-size: .8rem;
     font-weight: 300;
 }
+
+/* SMARTPHONES PORTRAIT
+@media only screen and (min-width: 300px) {
+
+
+} */
+
+/* SMARTPHONES LANDSCAPE */
+/* @media only screen and (min-width: 480px) {
+
+
+} */
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+    .details{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .timezone-details, .days-of-week-number{
+        display: flex;
+        flex-direction: column;
+      
+    }
+    .timezone-days-of-year, .days-of-year, .day-of-week, .week-number{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .timezone-value, .days-of-year-value, .day-of-week-value, .week-number-value{
+        font-size: 2rem;
+    }
+    .container{
+        padding: 2rem 4rem;
+    }
+    .quote-container{
+        width: 45ch;
+    }
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+
+
+}   

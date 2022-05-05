@@ -14,11 +14,15 @@ more_less_btn.addEventListener('click', function() {
         more_less_icon.classList.add('down');
         more_less_text.innerHTML = 'Less';
         quote_container.classList.add('hide');  // hide quote container
+        // scroll to top of page
+        window.scrollTo(0, document.body.scrollHeight);
     }else {
         details.classList.add('hide');
         more_less_icon.classList.remove('down');
         more_less_text.innerHTML = 'More';
         quote_container.classList.remove('hide');  // show quote container
-    }
-        // details.classList.toggle('show');
+        // scroll to the top of the page
+        window.scrollTo(0, 0);
+        // window.scrollTo(0, details.offsetTop + details.offsetHeight);
+    };
     });
