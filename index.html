@@ -16,17 +16,25 @@
 <main>
   <!-- quote of the day -->
   <div class="quote-container container">
+   
     <p class="quote">
+      <span class="refresh-icon">
+        <img src="./assets/desktop/icon-refresh.svg" alt="refresh icon">
+      </span>
+      <span class="quote-text">
       “The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.”
+      </span>
     </p>
     <p>
-      <span class="author">- Albert Einstein</span>
+      <span class="quote-author">- Albert Einstein</span>
     </p>
   </div>
 
   <div class="clock">
       <!-- show time -->
   <div class="time-container container">
+    <!-- time -->
+    <div class="time">
       <div class="greetings">
         <h2>
           <span class="day-night-icon">
@@ -37,13 +45,14 @@
       </div>
       <div class="time-display">
         <h1 id="time">11:11</h1>
-        <span class="zone">BST</span>
+        <span class="zone" id="timezone"></span>
       </div>
       <div class="location">
         <p class="location-text">
-          In London, UK
+
         </p>
       </div>
+    </div>
         <!-- More less button -->
   <div class="more-less">
     <span class="more-less-text">More</span>
@@ -75,11 +84,11 @@
     </div>
   <!-- days of week and week number -->
   <div class="days-of-week-number">
-    <div class="day-of-week">
-      <p class="day-of-week-text">
+    <div class="days-of-week">
+      <p class="days-of-week-text">
         day of the week
       </p>
-      <p class="day-of-week-value">
+      <p class="days-of-week-value">
         5 
     </div>
     <div class="week-number">
